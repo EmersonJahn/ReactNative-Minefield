@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar } from 'react-native';
 import { Header, LearnMoreLinks, Colors, DebugInstructions, ReloadInstructions } from 'react-native/Libraries/NewAppScreen';
 import params from './src/params';
+import Field from './src/components/Field'
 
 export default class App extends Component {
 
@@ -20,6 +21,7 @@ export default class App extends Component {
             {params.getRowsAmount()} x {params.getColomnsAmount()}
         </Text>
 
+        <Field></Field>
       </View>
 
     );
