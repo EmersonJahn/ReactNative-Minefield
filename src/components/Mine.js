@@ -2,9 +2,7 @@ import React from 'react'
 import { View, StyleSheet } from 'react-native'
 
 export default props => {
-
     return (
-
         <View style={styles.container}>
             <View style={styles.coreMine}></View>
             <View style={styles.line}></View>
@@ -12,18 +10,14 @@ export default props => {
             <View style={[styles.line, { transform: [{ rotate: '90deg' }] }]}></View>
             <View style={[styles.line, { transform: [{ rotate: '135deg' }] }]}></View>
         </View>
-
     )
-
 }
 
 const styles = StyleSheet.create({
-
     container: {
         alignItems: 'center',
         justifyContent: 'center'
     },
-
     coreMine: {
         height: 14,
         width: 14,
@@ -32,7 +26,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center'
     },
-
     line: {
         position: 'absolute',
         height: 3,
@@ -40,5 +33,4 @@ const styles = StyleSheet.create({
         borderRadius: 3,
         backgroundColor: 'black'
     }
-
 })

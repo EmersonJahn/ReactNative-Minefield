@@ -5,11 +5,8 @@ import params from './src/params';
 import Field from './src/components/Field'
 
 export default class App extends Component {
-
   render() {
-
     return (
-
       <View>
 
         <Text>
@@ -30,12 +27,11 @@ export default class App extends Component {
         <Field mined></Field>
         <Field mined opened></Field>
         <Field mined opened exploded></Field>
+        <Field flagged></Field>
+        <Field flagged opened></Field>
       </View>
-
     );
-    
   }
-
 }
 
 // const App: () => React$Node = () => {
