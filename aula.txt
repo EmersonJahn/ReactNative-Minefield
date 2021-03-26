@@ -1,1 +1,1 @@
-75. Marcar Campo (onLongPress)
+77. Selecionar Nível de Dificuldade

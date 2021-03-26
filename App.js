@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Alert } from 'react-native';
+import { createMineBoard, cloneBoard, opendField, hadExplosion, wonGame, showMines, invertFlag, flagsUsed } from './src/functions'
 import params from './src/params';
 import MineField from './src/components/MineField'
-import { createMineBoard, cloneBoard, opendField, hadExplosion, wonGame, showMines, invertFlag } from './src/functions'
+import Header from './src/components/Header'
 
 
 export default class App extends Component {
@@ -61,16 +62,10 @@ export default class App extends Component {
   render() {
     return (
       <View>
-
-        <Text>
-          Iniciando o Mines!
-        </Text>
-
-        <Text>
-          Tamanho da grade:
-          {params.getRowsAmount()} x {params.getColomnsAmount()}
-        </Text>
-
+        <Header 
+          flagsLeft={this.minesAmount() - flagsUsed(this.state.board)}
+          onNewGame={() => this.setState(this.createState())}
+        ></Header>
         <View style={styles.board}>
           <MineField 
             board={this.state.board} 
