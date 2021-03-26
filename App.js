@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, Alert } from 'react-native';
 import params from './src/params';
 import MineField from './src/components/MineField'
-import { createMineBoard, cloneBoard, opendField, hadExplosion, wonGame, showMines } from './src/functions'
+import { createMineBoard, cloneBoard, opendField, hadExplosion, wonGame, showMines, invertFlag } from './src/functions'
 
 
 export default class App extends Component {
@@ -46,6 +46,18 @@ export default class App extends Component {
     this.setState({ board, lost, won })
   }
 
+  onSelectField = (row, column) => {
+    const board = cloneBoard(this.state.board)
+    invertFlag(board, row, column)
+    const won = wonGame(board)
+
+    if (won) {
+      Alert.alert('Parabéns!!', 'Você venceu!')
+    }
+
+    this.setState({ board, won})
+  }
+
   render() {
     return (
       <View>
@@ -60,7 +72,11 @@ export default class App extends Component {
         </Text>
 
         <View style={styles.board}>
-          <MineField board={this.state.board} onOpenField={this.onOpenField}></MineField>
+          <MineField 
+            board={this.state.board} 
+            onOpenField={this.onOpenField}
+            onSelectField={this.onSelectField}
+          ></MineField>
         </View>
 
         {/* <Text>
