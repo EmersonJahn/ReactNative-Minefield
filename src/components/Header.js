@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-around',
         paddingTop: 20,
-        paddingBottom: 50,
         paddingHorizontal: 20
     },
     flagContainer: {
