@@ -43,14 +43,14 @@ const styles = StyleSheet.create({
         backgroundColor: '#EEE',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 15
+        padding: 15,
     },
     title: {
         fontSize: 30,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
     },
     button: {
-        marginTop: 10,
+        marginTop: 8,
         padding: 5
     },
     buttonLabel: {
@@ -59,12 +59,18 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },  
     bgEasy: {
-        backgroundColor: '#49B65D'
+        backgroundColor: '#49B65D',
+        alignItems: 'center',
+        width: 200
     },
     bgNormal: {
-        backgroundColor: '#2765F7'
+        backgroundColor: '#2765F7',
+        alignItems: 'center',
+        width: 200
     },
     bgHard: {
-        backgroundColor: '#F26337'
+        backgroundColor: '#F26337',
+        alignItems: 'center',
+        width: 200
     },
 })

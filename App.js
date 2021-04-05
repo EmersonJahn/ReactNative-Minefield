@@ -38,7 +38,7 @@ export default class App extends Component {
 
     if (lost) {
       showMines(board)
-      Alert.alert('Perdeeeu!!', 'Que buuurro!')
+      Alert.alert('Você perdeu :(', '')
     }
 
     if (won) {
@@ -91,14 +91,17 @@ export default class App extends Component {
         </Text> */}
 
       </View>
+      
     );
   }
+
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
+    // marginBottom: 25,
   },
   board: {
     alignItems: 'center',

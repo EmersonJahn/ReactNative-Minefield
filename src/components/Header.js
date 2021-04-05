@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-around',
         paddingTop: 20,
-        paddingHorizontal: 20
+        paddingHorizontal: 20,
     },
     flagContainer: {
         flexDirection: 'row'
